@@ -1,6 +1,8 @@
 .categories-component{
     font-family: 'Roboto';
     background-color: #ffffff;
+    max-width: 960px;
+    margin: 0 auto;
     .categories-container{
         padding: 10px;
         .all-categories-container{

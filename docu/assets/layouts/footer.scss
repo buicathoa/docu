@@ -1,10 +1,12 @@
 .footer-component {
-  background-color: #9fb8b7;
+  background-color: #ffba00;
   font-family: "Roboto";
-  max-width: 936px;
   color: #ffffff;
   .footer-container {
     padding: 20px;
+    max-width: 936px;
+    margin-left: auto;
+    margin-right: auto;  
     .footer-top {
       padding-bottom: 7px;
       border-bottom: 1px solid #ece8e8;

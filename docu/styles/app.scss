@@ -2,22 +2,72 @@
     background-color: #f5f5f5;
     height: 100vh;
     overflow: auto;
-    .page-container{
-        max-width: 936px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 body{
     margin: 0 !important
 }
+.form-select {
+    height: 40px;
+    border:1px solid #fe9900;
+    .ant-select-selector{
+        height: 100% !important;
+        border: unset !important;
+        align-items: center !important;
+    }
+    &.ant-select-focused{
+        border: 1px solid red !important;
+        border-color: unset !important;
+    }
+}
+
+.form-textarea{
+    border-color: #fe9900 !important;
+    &:focus{
+        outline: none !important;
+    }
+}
+
+.form-checkbox {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+    color: #2c2c2c;
+    line-height: 15px;
+    span {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .form-checkbox-label {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 16px;
+      color: #2c2c2c;
+      line-height: 32px;
+      margin-left: 10px;
+    }
+    .ant-checkbox {
+      font-size: 16px;
+      margin-right: 10px;
+      input {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #fe9900 !important;
+      border-color: #fe9900 !important;
+    }
+  }
 
 @import './assets/layouts/header.scss';
+@import './assets/layouts/dynamicPage.scss';
 @import './assets/layouts/footer.scss';
+@import './assets/layouts/postNews.scss';
+@import './assets/layouts/detailNews.scss';
 @import './assets/layouts/Home/carousels.scss';
 @import './assets/layouts/Home/categories.scss';
 @import './assets/layouts/Home/latestNews.scss';
-
+@import './assets/layouts/NewsItem.scss';
 @import 'antd/dist/antd.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');

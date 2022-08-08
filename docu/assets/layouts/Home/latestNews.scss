@@ -1,39 +1,12 @@
 .latest-news-component{
     font-family: 'Roboto';
     margin-top:10px;
+    max-width: 960px;
+    margin: 0 auto;
     .latest-news-container{
         padding-top: 5px;
         background-color: #ffffff;
         padding: 10px 20px;
-        .latest-news-item{
-            cursor: pointer;
-            padding: 12px;
-            text-align: center;
-            border: 1px solid rgb(213, 204, 204);
-            // box-shadow: 0 0 10px 0 rgba(25, 25, 25, 0.5);
-            img{
-                display: block;
-                margin: auto;
-                transition: transform .2s;
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }
-            .latest-news-item-description{
-                .title{
-                    height: 40px !important;
-                }
-                .price{
-                    color: #d0021b;
-                    font-size: 15px;
-                }
-                .location{
-                    font-size: 10px;
-                    color:#b0a8a8;
-                    font-style: italic;
-                }
-            }
-        }
     }
     .see-more{
         text-align: center;
@@ -41,7 +14,7 @@
         cursor:pointer;
         span{
             padding: 10px 100px;
-            background-color: #9fb8b7;
+            background-color: #ffba00;
             border-radius: 10px;
             color: #ffffff;
             font-size: 16px;

@@ -1,11 +1,11 @@
 import { ConnectedRouter } from "connected-next-router";
 import { Provider } from "react-redux";
 import Head from "next/head";
-import store from "./reducer/rootReducer";
+import store from "./../reducer/rootReducer";
 import { AppProps } from 'next/app';
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./../components/Header";
+import Footer from "./../components/Footer";
 import "./../styles/app.scss";
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
