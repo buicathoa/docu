@@ -1,6 +1,8 @@
 import createSagaMiddleware from "@redux-saga/core";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { createRouterMiddleware, routerReducer } from "connected-next-router";
+import rootSaga from "../sagas/rootSaga";
+import CategoryReducer from "./categoryReducer";
 // import NotifyReducer from "reducer/NotifySlice";
 // import AddressReducer from "../reducer/AddressSlice";
 // import CategoryReducer from "../reducer/CategorySlice";
@@ -23,6 +25,7 @@ import { createRouterMiddleware, routerReducer } from "connected-next-router";
 
 const rootReducer = combineReducers({
     router: routerReducer,
+    category: CategoryReducer
     // loading: loadingReducer,
     // login: loginReducer,
     // dangKy: dangKyReducer,
@@ -50,6 +53,9 @@ const store = configureStore({
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware, routerMiddleware),
 })
 
-// sagaMiddleware.run(rootSaga);
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+
+sagaMiddleware.run(rootSaga);
 
 export default store;

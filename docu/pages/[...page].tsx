@@ -8,6 +8,15 @@ import {
 import Carousels from "../components/Home/Carousels";
 import { Row, Col, Popover } from "antd";
 
+
+// export const  getServerSideProps =(context) => {
+//   return {
+//     props: {
+//       news: context.query
+//     }
+// }
+// }
+
 const ListPosts = () => {
   const [pageType, setPageType] = useState(true)
   return (
