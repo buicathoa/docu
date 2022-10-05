@@ -1,3 +1,5 @@
+
+
 const fileTypes = [
     'image/apng',
     'image/bmp',

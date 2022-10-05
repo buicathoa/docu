@@ -3,6 +3,9 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { createRouterMiddleware, routerReducer } from "connected-next-router";
 import rootSaga from "../sagas/rootSaga";
 import CategoryReducer from "./categoryReducer";
+import LocationReducer from "./locationReducer";
+import PostReducer from "./postReducer";
+import UserReducer from "./userReducer";
 // import NotifyReducer from "reducer/NotifySlice";
 // import AddressReducer from "../reducer/AddressSlice";
 // import CategoryReducer from "../reducer/CategorySlice";
@@ -25,7 +28,10 @@ import CategoryReducer from "./categoryReducer";
 
 const rootReducer = combineReducers({
     router: routerReducer,
-    category: CategoryReducer
+    category: CategoryReducer,
+    user: UserReducer,
+    location: LocationReducer,
+    post: PostReducer
     // loading: loadingReducer,
     // login: loginReducer,
     // dangKy: dangKyReducer,
@@ -50,7 +56,9 @@ const sagaMiddleware = createSagaMiddleware();
 const routerMiddleware = createRouterMiddleware()
 const store = configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware, routerMiddleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    }).concat(sagaMiddleware, routerMiddleware),
 })
 
 export type AppDispatch = typeof store.dispatch;

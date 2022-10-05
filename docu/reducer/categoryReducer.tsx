@@ -5,8 +5,9 @@ const category = createSlice({
     initialState: {listCate:[]},
     reducers: ({
         fetchListCategory: (state, action) => {
-            console.log('12321453', action)
         },
+        fetchListFilterByCategory: (state, action) => {},
+        fetchListBrandBySubcategory: (state, action) => {}
         // fetchListSuccess: (state, action) => {
         //     state.listCate = action.payload
         // }

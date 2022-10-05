@@ -3,6 +3,8 @@
     padding: 12px;
     text-align: center;
     border: 1px solid rgb(213, 204, 204);
+    max-height: calc(100vh - 400px);
+    overflow: auto;
     &:hover{
         box-shadow: 0 1px 8px 0 rgb(0 0 0 / 30);
     }

@@ -1,5 +1,7 @@
 .list-posts-filter-wrapper {
   font-family: "Roboto";
+  max-height: calc(100vh - 400px);
+  overflow: auto;
   .list-posts-filter {
     background-color: #ffffff;
     .list-posts-filter-container{
